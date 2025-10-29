@@ -1,0 +1,3 @@
+## Some basic CMake and vs code Ignores
+.vscode/*
+build/*
