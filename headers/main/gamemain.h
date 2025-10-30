@@ -1,4 +1,5 @@
 #pragma once
+#include "common/types.h"
 
 enum GAME_MODE
 {
@@ -16,4 +17,7 @@ enum GAME_MODE_CHANGE
     GMC_IN_GAMERETIRE_OUT = 3
 };
 
+extern int GameInit();
 extern void GameMain();
+extern int GameInitLoad();
+extern void GameModeChange(u_char mode);

@@ -1,10 +1,10 @@
 #pragma once
-#include "Types.h"
+#include "types.h"
 
 typedef struct
 { // 0x20
     /* 0x00 */ u_long count;
-    /* 0x08 */ sceCdCLOCK rtc;
+    // sceCdCLOCK rtc;
     /* 0x10 */ u_int sreset_count;
     /* 0x14 */ u_char sreset_ng;
     /* 0x15 */ u_char reset;
@@ -42,4 +42,9 @@ typedef struct
     u_int padding;
 } INGAME_WRK;
 
+extern u_int realtime_scene_flg;
+extern u_int scene_bg_load_flg;
+
 extern SYS_WRK sys_wrk;
+extern INGAME_WRK ingame_wrk;
+extern OUTGAME_WRK outgame_wrk;
