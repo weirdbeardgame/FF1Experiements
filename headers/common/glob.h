@@ -73,6 +73,7 @@ enum
 
 extern u_int realtime_scene_flg;
 extern u_int scene_bg_load_flg;
+extern u_char mc_start_flg;
 
 extern SYS_WRK sys_wrk;
 extern INGAME_WRK ingame_wrk;

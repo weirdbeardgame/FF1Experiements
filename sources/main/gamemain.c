@@ -66,23 +66,37 @@ int GameInit()
 void GameMain()
 {
 
-    switch (sys_wrk.mode)
+    switch (sys_wrk.game_mode)
     {
     case GAME_MODE_INIT:
         if (GameInit())
         {
-            printf("GAME_MODE_INIT\n");
-            sys_wrk.game_mode = GAME_MODE_OUTGAME;
+            if (mc_start_flg == 1)
+            {
+                // This does print, it's just so fast it can't be seen outside of logs
+                printf("GAME_MODE_INIT\n");
+                sys_wrk.game_mode = mc_start_flg;
+                // mcInit(7, NULL, 0);
+                mc_start_flg = 0;
+            }
+            else
+            {
+                sys_wrk.game_mode = GAME_MODE_OUTGAME;
+            }
         }
         break;
 
     case GAME_MODE_MCCHECK:
+        printf("GAME_MODE_MCCHECK\n");
+        sys_wrk.game_mode = GAME_MODE_OUTGAME;
         break;
 
     case GAME_MODE_OUTGAME:
+        printf("GAME_MODE_OUTGAME\n");
         break;
 
     case GAME_MODE_INGAME:
+        printf("GAME_MODDE_INGAME\n");
         break;
     }
 }

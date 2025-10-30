@@ -5,10 +5,17 @@
 #include "main/gamemain.h"
 #include "common/glob.h"
 
-static char *command;
+static u_char reset = 0x0;
 
 u_int realtime_scene_flg;
 u_int scene_bg_load_flg;
+u_char mc_start_flg;
+
+// belongs in system.c
+void InitSystem()
+{
+    mc_start_flg = 1;
+}
 
 void InitGameFirst()
 {
@@ -30,7 +37,7 @@ void InitGameFirst()
 
 int SoftResetChk()
 {
-    if (command == "EXIT")
+    if (reset)
     {
         return 1;
     }
@@ -39,10 +46,15 @@ int SoftResetChk()
 
 int main()
 {
+    InitSystem();
+
     do
     {
-        GameMain();
-    } while (!SoftResetChk());
-
+        InitGameFirst();
+        do
+        {
+            GameMain();
+        } while (!SoftResetChk());
+    } while (1);
     return 0;
 }
