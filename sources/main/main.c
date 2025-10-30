@@ -38,7 +38,6 @@ int SoftResetChk()
 
 int main()
 {
-
     do
     {
         GameMain();
