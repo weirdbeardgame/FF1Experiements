@@ -3,19 +3,12 @@
 #include "outgame/title.h"
 #include "outgame/outgame.h"
 #include "main/gamemain.h"
-#include "common/glob.h"
+#include "os/system.h"
 
 static u_char reset = 0x0;
 
 u_int realtime_scene_flg;
 u_int scene_bg_load_flg;
-u_char mc_start_flg;
-
-// belongs in system.c
-void InitSystem()
-{
-    mc_start_flg = 1;
-}
 
 void InitGameFirst()
 {

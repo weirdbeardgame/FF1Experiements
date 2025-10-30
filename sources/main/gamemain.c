@@ -1,11 +1,10 @@
 #include <stdio.h>
 #include "main/gamemain.h"
-#include "common/glob.h"
 #include "outgame/title.h"
 #include "outgame/outgame.h"
+#include "main/glob.h"
 
-SYS_WRK sys_wrk;
-INGAME_WRK ingame_wrk;
+#define DEBUG 1
 
 int GameInitLoad()
 {
@@ -74,7 +73,7 @@ void GameMain()
             if (mc_start_flg == 1)
             {
                 // This does print, it's just so fast it can't be seen outside of logs
-                printf("GAME_MODE_INIT\n");
+                debug_print("Mode: %s", "GAME_MODE_INIT");
                 sys_wrk.game_mode = mc_start_flg;
                 // mcInit(7, NULL, 0);
                 mc_start_flg = 0;
@@ -87,16 +86,16 @@ void GameMain()
         break;
 
     case GAME_MODE_MCCHECK:
-        printf("GAME_MODE_MCCHECK\n");
+        debug_print("Mode: %s", "GAME_MODE_MCCHECK\n");
         sys_wrk.game_mode = GAME_MODE_OUTGAME;
         break;
 
     case GAME_MODE_OUTGAME:
-        printf("GAME_MODE_OUTGAME\n");
+        debug_print("Mode: %s", "GAME_MODE_OUTGAME\n");
         break;
 
     case GAME_MODE_INGAME:
-        printf("GAME_MODDE_INGAME\n");
+        debug_print("Mode: %s", "GAME_MODDE_INGAME\n");
         break;
     }
 }

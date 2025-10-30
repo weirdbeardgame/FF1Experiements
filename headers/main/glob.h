@@ -1,5 +1,15 @@
 #pragma once
-#include "types.h"
+#include "common/types.h"
+#include <stdio.h>
+
+#ifdef DEBUG
+#define DEBUG_TEST 1
+#else
+#define DEBUG_TEST 0
+#endif
+
+#define debug_print(fmt, ...) \
+            do { if (DEBUG) fprintf(stderr, fmt, __VA_ARGS__); } while (0)
 
 typedef struct
 { // 0x20
@@ -71,9 +81,10 @@ enum
     INGAME_MODE_WAIT_MSN0 = 24
 };
 
-extern u_int realtime_scene_flg;
-extern u_int scene_bg_load_flg;
+extern u_char mc_language;
 extern u_char mc_start_flg;
+extern u_int scene_bg_load_flg;
+extern u_int realtime_scene_flg;
 
 extern SYS_WRK sys_wrk;
 extern INGAME_WRK ingame_wrk;
