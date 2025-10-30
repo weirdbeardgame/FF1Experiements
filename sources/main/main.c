@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 #include "outgame/title.h"
 #include "outgame/outgame.h"
 #include "main/gamemain.h"

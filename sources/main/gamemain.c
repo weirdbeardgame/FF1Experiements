@@ -5,8 +5,6 @@
 #include "outgame/outgame.h"
 
 SYS_WRK sys_wrk;
-TITLE_WRK title_wrk;
-OUTGAME_WRK outgame_wrk;
 INGAME_WRK ingame_wrk;
 
 int GameInitLoad()
