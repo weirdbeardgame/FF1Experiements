@@ -2,6 +2,7 @@
 #include "main/gamemain.h"
 #include "outgame/title.h"
 #include "outgame/outgame.h"
+#include "ingame/ingame.h"
 #include "main/glob.h"
 
 #define DEBUG 1
@@ -92,10 +93,12 @@ void GameMain()
 
     case GAME_MODE_OUTGAME:
         debug_print("Mode: %s", "GAME_MODE_OUTGAME\n");
+        GameModeChange(GMC_OUT_MENU_IN);
         break;
 
     case GAME_MODE_INGAME:
         debug_print("Mode: %s", "GAME_MODDE_INGAME\n");
+        InGameCtrl();
         break;
     }
 }

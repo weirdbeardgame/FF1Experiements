@@ -9,3 +9,8 @@ typedef unsigned long u32;
 typedef int s32;
 typedef long long s64;
 typedef u_char byte;
+
+typedef int qword[4] __attribute__((aligned(16)));
+typedef int sceVu0IVECTOR[4] __attribute__((aligned(16)));
+typedef float sceVu0FVECTOR[4] __attribute__((aligned(16)));
+typedef float sceVu0FMATRIX[4][4] __attribute__((aligned(16)));

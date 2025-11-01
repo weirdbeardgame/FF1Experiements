@@ -4,6 +4,7 @@
 #include "outgame/outgame.h"
 #include "main/gamemain.h"
 #include "os/system.h"
+#include "ingame/ingame.h"
 
 static u_char reset = 0x0;
 
