@@ -38,10 +38,9 @@ int SoftResetChk()
     return 0;
 }
 
-int main()
+int main(int argc, char *argv[])
 {
     InitSystem();
-
     do
     {
         InitGameFirst();

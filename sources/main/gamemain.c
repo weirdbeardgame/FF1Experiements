@@ -74,7 +74,6 @@ void GameMain()
             if (mc_start_flg == 1)
             {
                 // This does print, it's just so fast it can't be seen outside of logs
-                debug_print("Mode: %s", "GAME_MODE_INIT");
                 sys_wrk.game_mode = mc_start_flg;
                 // mcInit(7, NULL, 0);
                 mc_start_flg = 0;
@@ -87,17 +86,13 @@ void GameMain()
         break;
 
     case GAME_MODE_MCCHECK:
-        debug_print("Mode: %s", "GAME_MODE_MCCHECK\n");
         sys_wrk.game_mode = GAME_MODE_OUTGAME;
         break;
 
     case GAME_MODE_OUTGAME:
-        debug_print("Mode: %s", "GAME_MODE_OUTGAME\n");
-        GameModeChange(GMC_OUT_MENU_IN);
         break;
 
     case GAME_MODE_INGAME:
-        debug_print("Mode: %s", "GAME_MODDE_INGAME\n");
         InGameCtrl();
         break;
     }
