@@ -1,9 +1,9 @@
 #include <stdio.h>
-#include "main/gamemain.h"
-#include "outgame/title.h"
-#include "outgame/outgame.h"
-#include "ingame/ingame.h"
-#include "main/glob.h"
+#include "gamemain.h"
+#include "../outgame/title.h"
+#include "../outgame/outgame.h"
+#include "../ingame/ingame.h"
+#include "glob.h"
 
 #define DEBUG 1
 

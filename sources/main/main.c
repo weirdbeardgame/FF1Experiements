@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <string.h>
-#include "outgame/title.h"
-#include "outgame/outgame.h"
-#include "main/gamemain.h"
-#include "os/system.h"
-#include "ingame/ingame.h"
+#include "gamemain.h"
+#include "../outgame/title.h"
+#include "../outgame/outgame.h"
+#include "../os/system.h"
+#include "../ingame/ingame.h"
 
 static u_char reset = 0x0;
 

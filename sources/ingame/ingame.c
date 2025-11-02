@@ -1,6 +1,6 @@
-#include "ingame/ingame.h"
-#include "ingame/ig_init.h"
-#include "main/glob.h"
+#include "ingame.h"
+#include "ig_init.h"
+#include "../main/glob.h"
 
 void InGameInit()
 {

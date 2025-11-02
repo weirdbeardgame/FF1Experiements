@@ -1,4 +1,4 @@
-#include "main/glob.h"
+#include "glob.h"
 
 OUTGAME_WRK outgame_wrk;
 INGAME_WRK ingame_wrk;

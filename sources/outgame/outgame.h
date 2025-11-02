@@ -1,5 +1,5 @@
 #pragma once
-#include "main/glob.h"
+#include "../main/glob.h"
 
 enum OUTGAME_MODE
 {

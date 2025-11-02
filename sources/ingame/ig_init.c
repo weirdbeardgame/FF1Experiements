@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "ingame/ig_init.h"
-#include "main/glob.h"
+#include "ig_init.h"
+#include "../main/glob.h"
 
 LOAD_START_WRK load_start_wrk;
 

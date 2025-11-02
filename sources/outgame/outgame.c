@@ -1,2 +1,2 @@
-#include "outgame/outgame.h"
+#include "outgame.h"
 #include "glob.h"

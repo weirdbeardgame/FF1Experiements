@@ -1,5 +1,5 @@
 #pragma once
-#include "common/types.h"
+#include "types.h"
 
 typedef struct
 { // 0x8

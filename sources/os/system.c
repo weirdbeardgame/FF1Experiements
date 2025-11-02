@@ -1,5 +1,5 @@
-#include "os/system.h"
-#include "main/glob.h"
+#include "system.h"
+#include "../main/glob.h"
 
 void InitSystem()
 {
